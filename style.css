@@ -1,0 +1,713 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --accent: #d50001;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--accent);
+}
+.nav {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 10px;
+  width: 90%;
+  justify-self: center;
+  font-size: 1em;
+  position: absolute;
+  font-weight: 900;
+  z-index: 100000;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.navbrand {
+  height: 100%;
+}
+.hero-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(./assets/Hero-Img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.span {
+  color: var(--accent);
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+}
+.hero-logo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+.hero-section h2 {
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.hero-section h3 {
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.hero-section button {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  transition: all ease 300ms;
+  cursor: pointer;
+}
+.hero-section button:hover {
+  border: 2px solid var(--accent);
+  background-color: transparent;
+}
+/* .Company_Overview {
+  background-color: #af0506;
+  text-align: center;
+  color: var(--white);
+  padding: 80px 0 80px 0;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.Overview_Child {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.overview_icon {
+  height: 80px;
+}
+.overview_text {
+  font-size: medium;
+  font-weight: 100;
+} */
+.Business_Model {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 80px 30px;
+}
+.Business_Child {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+}
+.chart {
+  margin-bottom: 25px;
+
+}
+.chart span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+.bar {
+  background-color: rgb(255, 211, 211);
+  border-radius: 6px;
+  height: 38px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.media {
+  width: 80%;
+}
+.ppv {
+  width: 70%;
+}
+.live {
+  width: 50%;
+}
+.merch {
+  width: 35%;
+}
+.Business1 {
+  width: 45%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+.Business2 {
+  width: 55%;
+
+}
+.fighters-section {
+  background-color: var(--white);
+  color: var(--accent);
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.fighters-section h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: var(--black);
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+}
+.fighter-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+}
+.fightercard {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+    var(--accent);
+  width: 300px;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+.fightercard:hover
+{
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+.fightercard span {
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: 900;
+  top: 10px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+  text-transform: uppercase;
+}
+.first {
+  font-size: 30pt;
+  left: 10px;
+  z-index: 3;
+}
+.last {
+  font-size: 30pt;
+  right: 10px;
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+}
+.fightercard img {
+  position: relative;
+  height: 100%;
+  filter: drop-shadow();
+  z-index: 2;
+  filter: grayscale(100%);
+  
+}
+.fightercard .fighterdetail {
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  padding: 0 10px 0 10px;
+}
+.fightercard .fighterdetail div {
+  width: 60%;
+  padding-bottom: 5px;
+  margin: 0 auto 5px auto;
+  border-bottom: 1px solid var(--white);
+}
+.fights-section {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 90px 40px;
+}
+
+.fights-section span {
+  margin-bottom: 60px;
+  font-size: 7em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.stroked {
+  color: transparent;
+  -webkit-text-stroke: 4px var(--white);
+}
+.fight-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+.fight-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.fight-details {
+  flex: 1;
+}
+
+.fight-details h2 {
+  border-radius: 5px;
+  display: inline;
+  background-color: var(--white);
+  color: var(--accent);
+  font-size: 2rem;
+  padding: 4px;
+}
+
+.fight-details h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.fight-details p {
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.fight-image {
+  flex: 1;
+  position: relative;
+}
+
+.fight-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.fight-image .image-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+.strengths-section {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.strengths-section h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.strengths-section .section-subtitle {
+  color: var(--black);
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1rem;
+}
+
+.strengths-grid {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.strength-card {
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  padding: 35px 25px;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.strength-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(213, 0, 1, 0.6);
+}
+
+.strength-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.strength-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.strength-card p {
+  font-size: 0.9rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+.limitations-section {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.limitations-section h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.limitations-section .section-subtitle {
+  color: var(--white);
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1rem;
+}
+
+.limitations-grid {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.limitation-card {
+  color: var(--accent);
+  flex: 1;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 35px 25px;
+  transition: transform 0.3s ease;
+}
+
+.limitation-card:hover {
+  transform: translateY(-6px);
+}
+
+.limitation-card i {
+  font-size: 2.3rem;
+  color: #d50001;
+  margin-bottom: 20px;
+}
+
+.limitation-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.limitation-card p {
+  font-size: 0.9rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+.hof-section {
+  padding: 50px 40px;
+  text-align: center;
+  color: var(--white);
+}
+.hof-section h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.hof-section,
+.section-subtitle {
+  color: var(--white);
+  font: 1rem;
+  margin: 0 auto 60px;
+}
+.hof-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* gap: 30px; */
+}
+.hof-card {
+  flex: 0 0 calc(33.33% - 50px);
+  background-color: var(--white);
+  aspect-ratio: 1;
+  margin-bottom: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hof-card:hover
+{
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+.hof-card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: top;
+}
+.hof
+.hof-card h3 {
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.hof-card p {
+  color: var(--black);
+  font-size: 1.3rem;
+}
+.contact-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(./assets/Contactimg.avif);
+    background-position: top center;
+  color: #ffffff;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.contact-section h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-section .section-subtitle {
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+.contact-section {
+  background-color: #0b0b0b;
+  padding: 100px 20px;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto 0;
+}
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+}
+
+footer {
+  background-color: var(--white);
+  color: var(--accent);
+  padding: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+@media (max-width: 992px) {
+  .nav {
+    justify-content: space-between;
+  }
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: var(--black);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateY(-100%);
+    transition: 0.4s ease;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    font-size: 1.3rem;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  .hero-section h2 {
+    font-size: 3em;
+  }
+  .hero-section h3 {
+    font-size: 1em;
+  }
+  .hero-logo {
+    height: 80px;
+  }
+  .Business_Child {
+    flex-direction: column;
+  }
+  .Business1,
+  .Business2 {
+    width: 100%;
+  }
+  .fighter-container {
+    flex-wrap: wrap;
+  }
+  .fights-section span {
+    font-size: 5em;
+  }
+  .fight-image {
+    text-align: center;
+  }
+
+  .fight-image img {
+    width: 70%;
+  }
+  .strengths-grid {
+    flex-wrap: wrap;
+  }
+  .strength-card {
+    min-width: 300px;
+  }
+  .limitations-grid {
+    flex-wrap: wrap;
+  }
+  .limitation-card {
+    min-width: 300px;
+  }
+  .hof-section {
+    padding: 50px 20px;
+  }
+  .hof-card {
+    flex: 0 0 calc(33.33% - 20px);
+    padding: 10px;
+  }
+  .hof-card h3,
+  .hof-card p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    height: 50px;
+  }
+  .fight-row,
+  .fight-row.reverse {
+    flex-direction: column;
+  }
+
+  .fight-details {
+    order: 1;
+    text-align: center;
+  }
+
+  .fight-image {
+    order: 2;
+  }
+  .fights-section span {
+    font-size: 4em;
+  }
+  .fight-image .image-tag {
+    font-size: 0.7em;
+  }
+  .hof-card {
+    flex: 0 0 70%;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .navbrand {
+    height: 70%;
+  }
+  .hero-section h2 {
+    font-size: 2em;
+  }
+  .hero-section h3 {
+    font-size: 0.7em;
+  }
+}
