@@ -493,7 +493,6 @@ body {
   object-fit: cover;
   object-position: top;
 }
-.hof
 .hof-card h3 {
   color: var(--accent);
   text-transform: uppercase;
